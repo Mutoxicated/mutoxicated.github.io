@@ -1,0 +1,17 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}
+
+.book {
+    justify-content: center;
+    align-items: center;
+    margin-left: 35em;
+    margin-right: 35em;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

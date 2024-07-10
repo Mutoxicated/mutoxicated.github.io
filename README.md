@@ -1,3 +1,3 @@
-# Mutoxicated
+# TeneT
 
-My site
+Repo for my site called TeneT.
