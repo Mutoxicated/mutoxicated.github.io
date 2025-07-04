@@ -1,101 +1,262 @@
+:root {
+    --h1mod: 4;
+    --h2mod: 2;
+    --h3mod: 1.1;
+
+    --min: 10px;
+    --max: 15px;
+}
+
+.dimensiongetter {
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    display:none;
+}
 
 body {
     background-color: rgb(9, 17, 24);
 }
 
-.mainbody {
-    background-color: rgb(25, 35, 49);
-    color: rgb(255, 143, 78);
-    outline: 0.1em solid rgb(9, 15, 22);
-    font-family: monospace;
-    font-size: 1.1em;
-    text-align:left;
-    width: 50%;
-    height: auto;
-    margin: auto;
-    margin-top: 1em;
-    box-sizing: border-box;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 0.02em;
-    padding-top: 0.02em;
-
-    position:relative;
-    border-radius: 1em;
+p {
+    font-size: clamp(var(--min), 2vw, var(--max));
 }
 
-button {
-    outline: none;
-    border: none;
+
+@media only screen and (max-width: 1000px) {
+    .mainbody {
+        background-color: rgb(25, 35, 49);
+        color: rgb(255, 143, 78);
+        outline: 0.1em solid rgb(9, 15, 22);
+        font-family: monospace;
+        font-size: 0.9em;
+        text-align:left;
+        width: 89vw;
+        height: auto;
+        margin: auto;
+        margin-top: 1em;
+        box-sizing: border-box;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 0.02em;
+        padding-top: 0.02em;
+
+        position:relative;
+        border-radius: 1em;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .mainbody {
+        background-color: rgb(25, 35, 49);
+        color: rgb(255, 143, 78);
+        outline: 0.1em solid rgb(9, 15, 22);
+        font-family: monospace;
+        font-size: 1em;
+        text-align:left;
+        width: 50vw;
+        height: auto;
+        margin: auto;
+        margin-top: 1em;
+        box-sizing: border-box;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 0.02em;
+        padding-top: 0.02em;
+
+        position:relative;
+        border-radius: 1em;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    button {
+        outline: none;
+        border: none;
+        width: fit-content;
+        font-size: clamp(calc(var(--min)*1.1), 2.3vw, var(--max));
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    button {
+        outline: none;
+        width: fit-content;
+        border: none;
+        font-size: clamp(var(--min), 2.3vw, var(--max));
+    }
+}
+
+@font-face {
+    font-family: "Courier Prime";
+    src: url("fonts/CourierPrime/CourierPrime-Bold.ttf"), url("fonts/CourierPrime/CourierPrime-BoldItalic.ttf"), url("fonts/CourierPrime/CourierPrime-Italic.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+#newfont {
+    font-family: "Courier Prime";
 }
 
 .topbar button {
     background-color: inherit;
     color: inherit;
+    font-family:"Courier Prime"; 
+    font-weight: normal;
+    font-style: normal;
 }
 
 .topbar button:hover {
     color: rgb(132, 161, 255);
 }
 
-.topbar {
-    width: 50%;
-    height: 2.5em;
-    background-color: rgb(3, 9, 14);
+
+
+@media only screen and (max-width: 1000px) {
+    .topbar {
+        width: 89vw;
+        height: clamp(2em, 4vw, 3em);
+        background-color: rgb(3, 9, 14);
+        
+        color: rgb(117, 202, 5);
+
+        align-items: center;
+
+        display: flex;
+        flex-flow:row;
+        padding-left: 1em;
+
+        box-sizing: border-box;
+        margin: auto;
+        margin-top: 1em;
+        border-radius:1em;
     
-    color: rgb(117, 202, 5);
-    font-family:'Courier New'; 
-    font-size: 1em;
-    font-weight: normal;
-    align-items: center;
+    
+        outline-width: 0.1rem;
+        outline-color: rgb(51, 255, 0);
+        outline-style: dashed;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .topbar {
+        width: 50vw;
+        height: clamp(2em, 4vw, 3em);
+        background-color: rgb(3, 9, 14);
+        
+        color: rgb(117, 202, 5);
 
-    display: flex;
-    flex-flow:row;
-    gap: 1em;
-    padding-left: 1em;
+        align-items: center;
 
-    box-sizing: border-box;
-    margin: auto;
-    border-radius:1em;
+        display: flex;
+        flex-flow:row;
 
-    outline-width: 0.1rem;
-    outline-color: rgb(51, 255, 0);
-    outline-style: dashed;
+        box-sizing: border-box;
+        margin: auto;
+        margin-top: 1em;
+        border-radius:1em;
+        padding-left: 1em;
+    
+    
+        outline-width: 0.1rem;
+        outline-color: rgb(51, 255, 0);
+        outline-style: dashed;
+    }
 }
 
-.otherbody {
-    background-color: rgb(3, 9, 14);
-    color: rgb(202, 255, 58);
-    outline: 0.1em solid rgb(9, 15, 22);
-    font-family: monospace;
-    font-size: 1.1em;
-    text-align:left;
-    width: 50%;
-    height: auto;
-    margin: auto;
-    margin-top: 1em;
-    box-sizing: border-box;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 0.02em;
-    padding-top: 0.02em;
+@media only screen and (min-width: 1000px) {
+    .otherbody {
+        background-color: rgb(3, 9, 14);
+        color: rgb(202, 255, 58);
+        outline: 0.1em solid rgb(9, 15, 22);
+        font-family: monospace;
+        font-size: 1em;
+        text-align:left;
+        width: 50vw;
+        height: auto;
+        margin: auto;
+        margin-top: 1em;
+        box-sizing: border-box;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 0.02em;
+        padding-top: 0.02em;
 
-    position:relative;
-    border-radius: 1em;
+        position:relative;
+        border-radius: 1em;
 
 
-    outline-width: 0.1rem;
-    outline-color: rgb(81, 255, 0);
-    outline-style: dashed;
+        outline-width: 0.1rem;
+        outline-color: rgb(81, 255, 0);
+        outline-style: dashed;
+    }
 }
 
-.title {
-    color: rgb(0, 0, 0);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    -webkit-text-stroke: 0.06em;
-    -webkit-text-stroke-color: rgb(53, 90, 255);
-    font-size: 1.2em;
-    text-align: center;
+@media only screen and (max-width: 1000px) {
+    .otherbody {
+        background-color: rgb(3, 9, 14);
+        color: rgb(202, 255, 58);
+        outline: 0.1em solid rgb(9, 15, 22);
+        font-family: monospace;
+        font-size: 1em;
+        text-align:left;
+        width: 89vw;
+        height: auto;
+        margin: auto;
+        margin-top: 1em;
+        box-sizing: border-box;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 0.02em;
+        padding-top: 0.02em;
+
+        position:relative;
+        border-radius: 1em;
+
+
+        outline-width: 0.1rem;
+        outline-color: rgb(81, 255, 0);
+        outline-style: dashed;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .title {
+        background-color: rgb(19, 28, 41);
+        color: rgb(0, 0, 0);
+        display: grid;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-shadow:
+        -0.02em -0.02em rgb(53, 90, 255),
+        0.02em -0.02em rgb(53, 90, 255),
+        0.02em 0.02em rgb(53, 90, 255),
+        -0.02em 0.02em rgb(53, 90, 255);
+        text-align: center;
+        font-size: clamp(20px, 6.5vw, 50px);
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .title:before {
+        content: " WELCOME TO TENET ";
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .title {
+        background-color: rgb(19, 28, 41);
+        color: rgb(0, 0, 0);
+        display: grid;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-shadow:
+        -0.02em -0.02em rgb(53, 90, 255),
+        0.02em -0.02em rgb(53, 90, 255),
+        0.02em 0.02em rgb(53, 90, 255),
+        -0.02em 0.02em rgb(53, 90, 255);
+        text-align: center;
+        font-size:3.2em;
+    }
+    .title:before {
+        content: "--------- WELCOME TO TENET ---------";
+    }
 }
 
 ::selection {
