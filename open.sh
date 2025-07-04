@@ -1,0 +1,2 @@
+
+google-chrome ./index.html
