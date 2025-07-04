@@ -2,5 +2,8 @@
 
 function homeButton() {
     window.location.href = "https://mutoxicated.github.io/"
-    console.log("lol")
+}
+
+function githubButton() {
+    window.location.href = "https://github.com/Mutoxicated"
 }

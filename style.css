@@ -114,57 +114,58 @@ h3 {
     color: rgb(132, 161, 255);
 }
 
-
-
 @media only screen and (max-width: 1000px) {
     .topbar {
+        float: none;
         width: 89vw;
-        height: clamp(2em, 4vw, 3em);
+        height: clamp(2em, 4vw, 2em);
         background-color: rgb(3, 9, 14);
-        
-        color: rgb(117, 202, 5);
 
-        align-items: center;
-
-        display: flex;
-        flex-flow:row;
-        padding-left: 1em;
-
-        box-sizing: border-box;
         margin: auto;
         margin-top: 1em;
         border-radius:1em;
     
-    
         outline-width: 0.1rem;
         outline-color: rgb(51, 255, 0);
         outline-style: dashed;
+        text-align: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: clamp(0.3em, 1.8vw, 0.6em);
     }
 }
+
 @media only screen and (min-width: 1000px) {
     .topbar {
         width: 50vw;
-        height: clamp(2em, 4vw, 3em);
+        height: clamp(2em, 4vw, 2em);
         background-color: rgb(3, 9, 14);
         
-        color: rgb(117, 202, 5);
-
-        align-items: center;
-
-        display: flex;
-        flex-flow:row;
-
-        box-sizing: border-box;
         margin: auto;
         margin-top: 1em;
         border-radius:1em;
-        padding-left: 1em;
-    
     
         outline-width: 0.1rem;
         outline-color: rgb(51, 255, 0);
         outline-style: dashed;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 0.8vw;
     }
+}
+.navleft {
+    float:left;
+}
+
+.navright {
+    float:right;
+}
+
+.topbarelem {
+    position: relative;
+    background-color: transparent;
+    color: rgb(117, 202, 5);
+
 }
 
 @media only screen and (min-width: 1000px) {
@@ -274,4 +275,8 @@ h3 {
 
 .quotetext {
     color: rgb(255, 72, 0)
+}
+
+img:hover {
+    filter: invert(10%) sepia(100%) saturate(7500%) hue-rotate(170deg) brightness(99%) contrast(113%);
 }
