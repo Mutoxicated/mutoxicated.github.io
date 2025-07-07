@@ -176,7 +176,7 @@ h3 {
         0.02em 0.02em rgb(53, 90, 255),
         -0.02em 0.02em rgb(53, 90, 255);
         text-align: center;
-        font-size: clamp(39px, 7.5vw, 55px);
+        font-size: clamp(32px, 7.5vw, 55px);
         overflow: hidden;
         white-space: nowrap;
         padding-top: 0.12em;
