@@ -29,48 +29,33 @@ h3 {
 
 @media only screen and (max-width: 1000px) {
     .mainbody {
-        background-color: rgb(25, 35, 49);
-        color: rgb(255, 143, 78);
-        outline: 0.1em solid rgb(9, 15, 22);
-        font-family: monospace;
-        font-size: 0.9em;
-        text-align:left;
         width: 89vw;
-        height: auto;
-        margin: auto;
-        margin-top: 1em;
-        box-sizing: border-box;
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-bottom: 0.02em;
-        padding-top: 0.02em;
-
-        position:relative;
-        border-radius: 1em;
     }
 }
 
 @media only screen and (min-width: 1000px) {
     .mainbody {
-        background-color: rgb(25, 35, 49);
-        color: rgb(255, 143, 78);
-        outline: 0.1em solid rgb(9, 15, 22);
-        font-family: monospace;
-        font-size: 1em;
-        text-align:left;
-        width: 50vw;
-        height: auto;
-        margin: auto;
-        margin-top: 1em;
-        box-sizing: border-box;
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-bottom: 0.02em;
-        padding-top: 0.02em;
-
-        position:relative;
-        border-radius: 1em;
+        width: 50vw
     }
+}
+.mainbody {
+    background-color: rgb(25, 35, 49);
+    color: rgb(255, 143, 78);
+    outline: 0.1em solid rgb(9, 15, 22);
+    font-family: monospace;
+    font-size: 1em;
+    text-align:left;
+    height: auto;
+    margin: auto;
+    margin-top: 1em;
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.02em;
+    padding-top: 0.02em;
+
+    position:relative;
+    border-radius: 1em;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -81,7 +66,6 @@ h3 {
         font-size: clamp(calc(var(--min)*1.1), 2.3vw, var(--max));
     }
 }
-
 @media only screen and (min-width: 1000px) {
     button {
         outline: none;
@@ -114,45 +98,24 @@ h3 {
     color: rgb(132, 161, 255);
 }
 
-@media only screen and (max-width: 1000px) {
-    .topbar {
-        float: none;
-        width: 89vw;
-        height: clamp(2em, 4vw, 2em);
-        background-color: rgb(3, 9, 14);
+.topbar {
+    float: none;
+    width: 100%;
+    height: clamp(2em, 4vw, 2em);
+    background-color: rgb(3, 9, 14);
 
-        margin: auto;
-        margin-top: 1em;
-        border-radius:1em;
-    
-        outline-width: 0.1rem;
-        outline-color: rgb(51, 255, 0);
-        outline-style: dashed;
-        text-align: center;
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-top: clamp(0.3em, 1.8vw, 0.6em);
-    }
+    margin-top: 1em;
+    border-radius:0.1em;
+    box-sizing: border-box;
+
+    outline-width: 0.1rem;
+    outline-color: rgb(51, 255, 0);
+    outline-style: dashed;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.27em;
 }
 
-@media only screen and (min-width: 1000px) {
-    .topbar {
-        width: 50vw;
-        height: clamp(2em, 4vw, 2em);
-        background-color: rgb(3, 9, 14);
-        
-        margin: auto;
-        margin-top: 1em;
-        border-radius:1em;
-    
-        outline-width: 0.1rem;
-        outline-color: rgb(51, 255, 0);
-        outline-style: dashed;
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-top: 0.8vw;
-    }
-}
 .navleft {
     float:left;
 }
@@ -163,65 +126,42 @@ h3 {
 
 .topbarelem {
     position: relative;
-    background-color: transparent;
     color: rgb(117, 202, 5);
-
 }
 
 @media only screen and (min-width: 1000px) {
     .otherbody {
-        background-color: rgb(3, 9, 14);
-        color: rgb(202, 255, 58);
-        outline: 0.1em solid rgb(9, 15, 22);
-        font-family: monospace;
-        font-size: 1em;
-        text-align:left;
         width: 50vw;
-        height: auto;
-        margin: auto;
-        margin-top: 1em;
-        box-sizing: border-box;
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-bottom: 0.02em;
-        padding-top: 0.02em;
-
-        position:relative;
-        border-radius: 1em;
-
-
-        outline-width: 0.1rem;
-        outline-color: rgb(81, 255, 0);
-        outline-style: dashed;
     }
 }
-
 @media only screen and (max-width: 1000px) {
     .otherbody {
-        background-color: rgb(3, 9, 14);
-        color: rgb(202, 255, 58);
-        outline: 0.1em solid rgb(9, 15, 22);
-        font-family: monospace;
-        font-size: 1em;
-        text-align:left;
         width: 89vw;
-        height: auto;
-        margin: auto;
-        margin-top: 1em;
-        box-sizing: border-box;
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-bottom: 0.02em;
-        padding-top: 0.02em;
-
-        position:relative;
-        border-radius: 1em;
-
-
-        outline-width: 0.1rem;
-        outline-color: rgb(81, 255, 0);
-        outline-style: dashed;
     }
+}
+.otherbody {
+    background-color: rgb(3, 9, 14);
+    color: rgb(202, 255, 58);
+    outline: 0.1em solid rgb(9, 15, 22);
+    font-family: monospace;
+    font-size: 1em;
+    text-align:left;
+    height: auto;
+    margin: auto;
+    margin-top: 1em;
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.02em;
+    padding-top: 0.02em;
+
+    position:relative;
+    border-radius: 1em;
+
+
+    outline-width: 0.1rem;
+    outline-color: rgb(81, 255, 0);
+    outline-style: dashed;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -229,19 +169,23 @@ h3 {
         background-color: rgb(19, 28, 41);
         color: rgb(0, 0, 0);
         display: grid;
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: 'Courier Prime';
         text-shadow:
         -0.02em -0.02em rgb(53, 90, 255),
         0.02em -0.02em rgb(53, 90, 255),
         0.02em 0.02em rgb(53, 90, 255),
         -0.02em 0.02em rgb(53, 90, 255);
         text-align: center;
-        font-size: clamp(20px, 6.5vw, 50px);
+        font-size: clamp(39px, 7.5vw, 55px);
         overflow: hidden;
         white-space: nowrap;
+        padding-top: 0.12em;
     }
-    .title:before {
+    .hometitle::before {
         content: " WELCOME TO TENET ";
+    }
+    .portofoliotitle::before {
+        content: " PORTOFOLIO ";
     }
 }
 
@@ -250,17 +194,21 @@ h3 {
         background-color: rgb(19, 28, 41);
         color: rgb(0, 0, 0);
         display: grid;
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: 'Courier Prime';
         text-shadow:
         -0.02em -0.02em rgb(53, 90, 255),
         0.02em -0.02em rgb(53, 90, 255),
         0.02em 0.02em rgb(53, 90, 255),
         -0.02em 0.02em rgb(53, 90, 255);
         text-align: center;
-        font-size:3.2em;
+        font-size:clamp(40px, 4.4vw, 55px);
+        padding-top: 0.12em;
     }
-    .title:before {
+    .hometitle::before {
         content: "--------- WELCOME TO TENET ---------";
+    }
+    .portofoliotitle::before {
+        content: "--------- PORTOFOLIO ---------";
     }
 }
 
@@ -277,6 +225,39 @@ h3 {
     color: rgb(255, 72, 0)
 }
 
-img:hover {
-    filter: invert(10%) sepia(100%) saturate(7500%) hue-rotate(170deg) brightness(99%) contrast(113%);
+.hoverable img:hover {
+    filter: invert(10%) sepia(100%) saturate(7900%) hue-rotate(170deg) brightness(99%) contrast(113%);
+}
+
+.collage {
+    padding-top: 0.5em;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    display:flex;
+    flex-flow: wrap;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.drawing button {
+    background-color: inherit;
+}
+
+.drawing button img {
+    height: 1vw;
+    width: auto;
+}
+
+.drawing p {
+    font-family:Helvetica;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1vw;
+    color: rgb(255, 232, 232);
+}
+
+.drawing img {
+    height: 22vw;
+    width: auto;
 }
