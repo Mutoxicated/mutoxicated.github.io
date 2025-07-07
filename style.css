@@ -306,17 +306,33 @@ h3 {
     color:white;
 }
 
-.infobox img {
-    height: 15em;
+@media only screen and (max-width:1000px) {
+    .infobox img {
+        height: clamp(180px, 29.5vw, 300px);
+    }
+}
+@media only screen and (min-width:1000px) {
+    .infobox img {
+        height: clamp(180px, 29.5vw, 260px);
+    }
 }
 
 .infoboxcontext {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size:1.05vw;
     color: rgb(218, 200, 216);
     margin-left: 5px;
-    padding-top: 2.9vw;
+    padding-top: clamp(43px, 2.8vw, 90px);;
     width: 14em;
+}
+@media only screen and (max-width:1000px) {
+    .infoboxcontext {
+        font-size:clamp(12px, 1.95vw, 19.5px);
+    }
+}
+@media only screen and (min-width:1000px) {
+    .infoboxcontext {
+        font-size:clamp(12px, 1.95vw, 15.5px);
+    }
 }
 
 .copyright {
