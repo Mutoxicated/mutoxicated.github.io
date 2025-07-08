@@ -290,52 +290,62 @@ h3 {
 .infobox {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 4vw;
 }
 
 .infobox p img {
     height: clamp(16px, 1vw, 90px);
     width: auto;
     margin-left:5px;
+    outline-width: 0px;
 }
 
 .infoboxtitle {
     font-family: Helvetica;
     font-weight: bold;
     font-style: italic;
-    font-size: clamp(16px, 1.2vw, 90px);
+    font-size: clamp(19px, 1.2vw, 90px);
     color:white;
 }
 
 @media only screen and (max-width:1000px) {
     .infobox img {
-        height: clamp(180px, 29.5vw, 300px);
+        height: clamp(165px, 69vw, 380px);
     }
 }
 @media only screen and (min-width:1000px) {
     .infobox img {
-        height: clamp(180px, 29.5vw, 260px);
+        height: clamp(180px, 38vw, 270px);
     }
+}
+
+.infobox img {
+    outline-width: 0.01em;
+    outline-color: rgb(255, 242, 239);
+    outline-style: solid;
 }
 
 .infoboxcontext {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(218, 200, 216);
     margin-left: 5px;
-    padding-top: clamp(43px, 2.8vw, 90px);;
-    width: 14em;
 }
 @media only screen and (max-width:1000px) {
     .infoboxcontext {
         font-size:clamp(12px, 1.95vw, 19.5px);
+        width: clamp(165px, 69vw, 380px);
     }
 }
 @media only screen and (min-width:1000px) {
     .infoboxcontext {
-        font-size:clamp(12px, 1.95vw, 15.5px);
+        padding-top: clamp(40px, 2.9vw, 100px);;
+        font-size:clamp(12px, 2vw, 15.5px);
+        width: clamp(150px, 23vw, 270px);
     }
 }
 
 .copyright {
+    font-size:clamp(1px, 3vw, 15px);
     position:fixed;
     bottom: 0;
     animation: color-change 1s infinite;
