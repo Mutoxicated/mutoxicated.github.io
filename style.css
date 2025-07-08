@@ -290,12 +290,11 @@ h3 {
 .infobox {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 4vw;
+    margin-left: 3vw;
 }
 
 .infobox p img {
-    height: clamp(16px, 1vw, 90px);
-    width: auto;
+    height: clamp(1em, 1vw, 3em);
     margin-left:5px;
     outline-width: 0px;
 }
@@ -304,43 +303,47 @@ h3 {
     font-family: Helvetica;
     font-weight: bold;
     font-style: italic;
-    font-size: clamp(19px, 1.2vw, 90px);
+    font-size: clamp(19px, 1.2vw, 25px);
     color:white;
 }
 
 @media only screen and (max-width:1000px) {
     .infobox img {
-        height: clamp(165px, 69vw, 380px);
+        height: clamp(10em, 69vw, 30em);
+
+        outline-width: 0.01em;
+        outline-color: rgb(255, 242, 239);
+        outline-style: solid;
     }
 }
 @media only screen and (min-width:1000px) {
     .infobox img {
-        height: clamp(180px, 38vw, 270px);
-    }
-}
+        height: clamp(13em, 18vw, 26em);
 
-.infobox img {
-    outline-width: 0.01em;
-    outline-color: rgb(255, 242, 239);
-    outline-style: solid;
+        outline-width: 0.01em;
+        outline-color: rgb(255, 242, 239);
+        outline-style: solid;
+    }
 }
 
 .infoboxcontext {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(218, 200, 216);
-    margin-left: 5px;
+    margin-left: 0.5em;
 }
 @media only screen and (max-width:1000px) {
     .infoboxcontext {
-        font-size:clamp(12px, 1.95vw, 19.5px);
-        width: clamp(165px, 69vw, 380px);
+        font-size:clamp(12px, 2.4vw, 19.5px);
+        width: clamp(17em, 50vw, 20em);
+        text-align: center;
+        margin:auto;
     }
 }
 @media only screen and (min-width:1000px) {
     .infoboxcontext {
-        padding-top: clamp(40px, 2.9vw, 100px);;
-        font-size:clamp(12px, 2vw, 15.5px);
-        width: clamp(150px, 23vw, 270px);
+        padding-top: clamp(40px, 2.9vw, 100px);
+        font-size:clamp(0.4em, 1.1vw, 1.2em);
+        width: clamp(4em, 20vw, 15em);
     }
 }
 
