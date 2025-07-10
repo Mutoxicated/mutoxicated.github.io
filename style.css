@@ -244,13 +244,10 @@ h3 {
     gap: 0.2em;
 }
 
-.drawing button {
-    background-color: inherit;
-}
-
 .drawing p img {
     height: clamp(10px, 1vw, 90px);
-    width: auto;
+    max-height: 10%;
+    min-height: 5%;
     margin-left:clamp(0.3em, 0.4vw, 0.6em);
 }
 
@@ -294,16 +291,19 @@ h3 {
 }
 
 .infobox p img {
-    height: clamp(1em, 1vw, 3em);
     margin-left:5px;
     outline-width: 0px;
+    max-width: 10%;
+    min-width: 5%;
+    width: 1.2vw;
+    height:auto;
 }
 
 .infoboxtitle {
     font-family: Helvetica;
     font-weight: bold;
     font-style: italic;
-    font-size: clamp(16px, 1.2vw, 18px);
+    font-size: clamp(1em, 1.2vw, 1.2em);
     color:white;
 }
 
@@ -341,7 +341,7 @@ h3 {
 }
 @media only screen and (min-width:1000px) {
     .infoboxcontext {
-        padding-top: calc(clamp(16px, 1.2vw, 18px) * 2.2);
+        padding-top: calc(clamp(1.15em, 1.2vw, 1.3em) * 2.1 + calc(1em - clamp(0.4em, 1.1vw, 1.2em)));
         font-size:clamp(0.4em, 1.1vw, 1.2em);
         width: clamp(4em, 20vw, 15em);
     }
