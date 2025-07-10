@@ -20,7 +20,7 @@ body {
 
 @media only screen and (max-width: 1000px) {
     p {
-        font-size: 1.1em;
+        font-size: 1.05em;
     }
 }
 @media only screen and (min-width: 1000px) {
@@ -81,6 +81,7 @@ h2 {
     font-family: "Courier Prime"; 
     font-weight: normal;
     font-style: normal;
+    font-size: clamp(0.8em, 0.8vw, 1.3em)
 }
 
 .topbar {
