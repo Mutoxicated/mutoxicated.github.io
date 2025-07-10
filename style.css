@@ -18,13 +18,19 @@ body {
     background-color: rgb(9, 17, 24);
 }
 
-p {
-    font-size: clamp(var(--min), 2vw, var(--max));
+@media only screen and (max-width: 1000px) {
+    p {
+        font-size: 1.1em;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    p {
+        font-size: 1.2em;
+    }
 }
 
-h3 {
+h2 {
     font-style: italic;
-    font-size: 1.3em;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -58,23 +64,6 @@ h3 {
     border-radius: 1em;
 }
 
-@media only screen and (max-width: 1000px) {
-    button {
-        outline: none;
-        border: none;
-        width: fit-content;
-        font-size: clamp(calc(var(--min)*1.1), 2.3vw, var(--max));
-    }
-}
-@media only screen and (min-width: 1000px) {
-    button {
-        outline: none;
-        width: fit-content;
-        border: none;
-        font-size: clamp(var(--min), 2.3vw, var(--max));
-    }
-}
-
 @font-face {
     font-family: "Courier Prime";
     src: url("fonts/CourierPrime/CourierPrime-Bold.ttf"), url("fonts/CourierPrime/CourierPrime-BoldItalic.ttf"), url("fonts/CourierPrime/CourierPrime-Italic.ttf");
@@ -86,16 +75,12 @@ h3 {
     font-family: "Courier Prime";
 }
 
-.topbar button {
+.topbar a {
     background-color: inherit;
     color: inherit;
-    font-family:"Courier Prime"; 
+    font-family: "Courier Prime"; 
     font-weight: normal;
     font-style: normal;
-}
-
-.topbar button:hover {
-    color: rgb(132, 161, 255);
 }
 
 .topbar {
@@ -245,9 +230,7 @@ h3 {
 }
 
 .drawing p img {
-    height: clamp(10px, 1vw, 90px);
-    max-height: 10%;
-    min-height: 5%;
+    height: clamp(1.1em, 1.2vw, 1.5em);
     margin-left:clamp(0.3em, 0.4vw, 0.6em);
 }
 
@@ -285,25 +268,24 @@ h3 {
 }
 
 .infobox {
-    display: flex;
-    flex-wrap: wrap;
     margin-left: 3vw;
 }
-
-.infobox p img {
-    margin-left:5px;
+.infoboxtitle a img {
     outline-width: 0px;
-    max-width: 10%;
-    min-width: 5%;
-    width: 1.2vw;
-    height:auto;
+    height: clamp(1.1em, 1.2vw, 1.5em);
+    width: auto;
 }
 
 .infoboxtitle {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 0.5em;
+
     font-family: Helvetica;
     font-weight: bold;
     font-style: italic;
-    font-size: clamp(1em, 1.2vw, 1.2em);
+    font-size: clamp(1.1em, 1.2vw, 1.4em);
     color:white;
 }
 
@@ -333,18 +315,22 @@ h3 {
 }
 @media only screen and (max-width:1000px) {
     .infoboxcontext {
-        font-size:clamp(12px, 2.4vw, 19.5px);
-        width: clamp(17em, 50vw, 20em);
+        font-size: 1em;
+        width: clamp(10em, 60vw, 30em);
         text-align: center;
         margin:auto;
     }
 }
 @media only screen and (min-width:1000px) {
     .infoboxcontext {
-        padding-top: calc(clamp(1.15em, 1.2vw, 1.3em) * 2.1 + calc(1em - clamp(0.4em, 1.1vw, 1.2em)));
-        font-size:clamp(0.4em, 1.1vw, 1.2em);
+        font-size: clamp(0.4em, 1.1vw, 1.2em);
         width: clamp(4em, 20vw, 15em);
     }
+}
+
+.infoboxcontent {
+    display: flex;
+    align-items: center;
 }
 
 .pad {
@@ -370,4 +356,8 @@ h3 {
 }
 .copyright::before {
     content: "© 2025 Mutoxicated. All rights reserved."
+}
+
+a {
+    color: rgb(226, 198, 43);
 }
