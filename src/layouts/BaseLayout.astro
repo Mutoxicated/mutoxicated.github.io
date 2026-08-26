@@ -23,24 +23,35 @@ const today = new Date();
         <header>
             <nav>
                 <div>
-                    <div class:list={["headerlink", { active: href === "/" }]}>
-                        <a href="/">Home</a>
+                    <div
+                        class:list={[
+                            "headerlink",
+                            { active: href === "/mutoxicated.github.io/" },
+                        ]}
+                    >
+                        <a href="/mutoxicated.github.io/">Home</a>
                     </div>
                     <div
                         class:list={[
                             "headerlink",
-                            { active: href === "/blog" },
+                            { active: href === "/mutoxicated.github.io/blog" },
                         ]}
                     >
-                        <a href="/blog">Blog</a>
+                        <a href="/mutoxicated.github.io/blog">Blog</a>
                     </div>
                     <div
                         class:list={[
                             "headerlink",
-                            { active: href === "/portofolio" },
+                            {
+                                active:
+                                    href ===
+                                    "/mutoxicated.github.io/portofolio",
+                            },
                         ]}
                     >
-                        <a href="/portofolio">Portofolio</a>
+                        <a href="/mutoxicated.github.io/portofolio"
+                            >Portofolio</a
+                        >
                     </div>
                 </div>
                 <div>
@@ -63,7 +74,7 @@ const today = new Date();
                 </div>
             </nav>
         </header>
-        <img class="bg" src="/bg.png" />
+        <img class="bg" src="/mutoxicated.github.io/bg.png" />
         <slot />
     </body><footer>
         <a>&copy; {today.getFullYear()} Mutoxicated. All rights reserved.</a>
