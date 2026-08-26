@@ -1,9 +1,7 @@
 ---
 import "../styles/palette.css";
 import { Font } from "astro:assets";
-import type { HTMLAttributes } from "astro/types";
 
-type Props = HTMLAttributes<"a">;
 const { href } = Astro.props;
 
 const today = new Date();
@@ -26,18 +24,18 @@ const today = new Date();
                     <div
                         class:list={[
                             "headerlink",
-                            { active: href === "/mutoxicated.github.io/" },
+                            { active: href === "/" },
                         ]}
                     >
-                        <a href="/mutoxicated.github.io/">Home</a>
+                        <a href="/">Home</a>
                     </div>
                     <div
                         class:list={[
                             "headerlink",
-                            { active: href === "/mutoxicated.github.io/blog" },
+                            { active: href === "/blog" },
                         ]}
                     >
-                        <a href="/mutoxicated.github.io/blog">Blog</a>
+                        <a href="/blog">Blog</a>
                     </div>
                     <div
                         class:list={[
@@ -45,11 +43,11 @@ const today = new Date();
                             {
                                 active:
                                     href ===
-                                    "/mutoxicated.github.io/portofolio",
+                                    "/portofolio",
                             },
                         ]}
                     >
-                        <a href="/mutoxicated.github.io/portofolio"
+                        <a href="/portofolio"
                             >Portofolio</a
                         >
                     </div>
@@ -74,9 +72,10 @@ const today = new Date();
                 </div>
             </nav>
         </header>
-        <img class="bg" src="/mutoxicated.github.io/bg.png" />
+        <img class="bg" src="/bg.png" />
         <slot />
-    </body><footer>
+    </body>
+    <footer>
         <a>&copy; {today.getFullYear()} Mutoxicated. All rights reserved.</a>
         <div></div>
     </footer>
