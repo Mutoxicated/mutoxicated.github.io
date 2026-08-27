@@ -20,7 +20,7 @@ import "../styles/exhibit.css";
         </div>
     </div>
     <div id="portofolio">
-        <div class="programming">
+        <div class="programming hide">
             <div class="programming_pc">
                 <Exhibit1Layout
                     x_style="background-color: var(--ep-background-color); border-color: var(--ep-border-color); box-shadow: var(--ep-box-shadow);"
@@ -124,7 +124,7 @@ import "../styles/exhibit.css";
                 </div>
             </div>
         </div>
-        <div class="music">
+        <div class="music hide">
             <div class="music_ pc">
                 <Exhibit1Layout
                     x_style="background-color: var(--er-background-color); border-color: var(--er-border-color); box-shadow: var(--er-box-shadow);"
@@ -254,7 +254,7 @@ import "../styles/exhibit.css";
                 >
             </div>
         </div>
-        <div class="pixel_art">
+        <div class="pixel_art hide">
             <div class="pixel_art_pc">
                 <div class="flexcon">
                     <DrawingLayout
@@ -363,7 +363,6 @@ import "../styles/exhibit.css";
                 </div>
             </div>
         </div>
-        <div class="misc"></div>
     </div>
 </BaseLayout>
 <script>
@@ -445,11 +444,16 @@ import "../styles/exhibit.css";
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         border-radius: 14px;
-        box-shadow: rgb(150, 30, 0) 0 0 20px;
+        box-shadow: light-dark(rgb(255, 200, 200), rgb(150, 30, 0)) 0 0 20px;
     }
 
     .child:hover {
-        border-color: yellow;
+        border-color: light-dark(blue, yellow);
+    }
+    .child:hover h5,
+    .child.active h5 {
+        color: light-dark(rgb(0, 0, 180), rgb(220, 190, 110));
+        text-shadow: rgb(200, 200, 255) 0 0 14px;
     }
 
     .child:active {
@@ -461,7 +465,8 @@ import "../styles/exhibit.css";
         text-shadow: rgb(200, 100, 180) 0 0 19px;
     }
     .child.active {
-        border-color: yellow;
+        border-color: light-dark(blue, yellow);
+        box-shadow: light-dark(rgb(200, 200, 255), rgb(190, 160, 0)) 0 0 20px;
     }
 
     .child {
@@ -484,7 +489,7 @@ import "../styles/exhibit.css";
     }
     h5 {
         margin: 0.8em 1em 0.8em 1em;
-        color: rgb(220, 190, 110);
+        color: light-dark(rgb(190, 100, 30), rgb(220, 190, 110));
         text-shadow: rgb(200, 200, 180) 0 0 14px;
         font-weight: normal;
         padding: 0;

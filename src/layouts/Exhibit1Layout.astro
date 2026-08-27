@@ -84,13 +84,13 @@ const { href, src, style, title, x_style, t_style, classes } = props;
         width: 100%;
         height: auto;
         border-radius: 14px;
-        border: 2px solid white;
+        border: 2px solid light-dark(black, white);
         animation: tilt 0.3s linear;
         animation-delay: 0.3s;
     }
     img:hover {
         border-color: rgb(0, 200, 255);
-        box-shadow: rgb(0, 30, 180) 0 0 10px;
+        box-shadow: light-dark(rgb(200, 250, 255), rgb(0, 30, 180)) 0 0 10px;
     }
     figcaption,
     h4 {

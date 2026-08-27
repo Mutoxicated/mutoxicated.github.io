@@ -76,7 +76,7 @@ import "../styles/global.css";
             </div>
             <div>
                 <h4>
-                    <span id="pinky"
+                    <span id="special"
                         >If you've read up to this point, thank you and have a
                         great day!</span
                     >
@@ -96,9 +96,14 @@ import "../styles/global.css";
         display: grid;
         border-radius: 14px;
         border: 2px solid transparent;
-        border-color: deeppink;
-        box-shadow: rgb(120, 0, 50) 0 0 15px;
+        border-color: light-dark(blue, deeppink);
+        box-shadow: light-dark(rgb(210, 230, 255), rgb(120, 0, 50)) 0 0 15px;
         margin-top: 1em;
+    }
+
+    #special {
+        color: light-dark(blue, deeppink);
+        text-shadow: light-dark(rgb(210, 230, 255), rgb(120, 0, 50)) 0 0 14px;
     }
 
     .factsheet div {
@@ -107,13 +112,13 @@ import "../styles/global.css";
     }
     .factsheet div h4 {
         font-size: 1.14em;
-        color: cyan;
-        text-shadow: rgb(0, 100, 180) 0 0 17px;
+        color: var(--inner-accent-1-color);
+        text-shadow: var(--inner-spice-1-color) 0 0 17px;
     }
     .factsheet div p,
     a {
         font-size: 1.1em;
-        color: rgb(110, 160, 230);
+        color: var(--inner-accent-2-color);
     }
 
     @media only screen and (max-width: 1000px) {

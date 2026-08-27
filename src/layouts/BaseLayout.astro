@@ -9,6 +9,7 @@ const today = new Date();
 
 <html lang="en">
     <head>
+        <meta name="color-scheme" content="light dark" />
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" href="/favicon.ico" />
@@ -21,12 +22,7 @@ const today = new Date();
         <header>
             <nav>
                 <div>
-                    <div
-                        class:list={[
-                            "headerlink",
-                            { active: href === "/" },
-                        ]}
-                    >
+                    <div class:list={["headerlink", { active: href === "/" }]}>
                         <a href="/">Home</a>
                     </div>
                     <div
@@ -41,18 +37,20 @@ const today = new Date();
                         class:list={[
                             "headerlink",
                             {
-                                active:
-                                    href ===
-                                    "/portofolio",
+                                active: href === "/portofolio",
                             },
                         ]}
                     >
-                        <a href="/portofolio"
-                            >Portofolio</a
-                        >
+                        <a href="/portofolio">Portofolio</a>
                     </div>
                 </div>
                 <div>
+                    <button
+                        class="mode_toggle"
+                        style="margin-right: 1em; background-color: transparent;"
+                    >
+                        <p></p>
+                    </button>
                     <a
                         href="https://github.com/mutoxicated"
                         target="_blank"
@@ -72,16 +70,69 @@ const today = new Date();
                 </div>
             </nav>
         </header>
-        <img class="bg" src="/bg.png" />
+
         <slot />
-    </body>
-    <footer>
+    </body><footer>
         <a>&copy; {today.getFullYear()} Mutoxicated. All rights reserved.</a>
         <div></div>
     </footer>
+    <div class="noise"></div>
 </html>
 
+<script>
+    const theme = localStorage.getItem("theme");
+    if (theme) {
+        var meta = document.querySelector("meta[name='color-scheme']");
+        if (meta) {
+            meta.setAttribute("content", theme);
+        }
+    }
+
+    const modeToggles = document.querySelectorAll(".mode_toggle");
+
+    modeToggles.forEach((toggle) => {
+        var child = toggle.firstElementChild;
+        if (!child) return;
+        child.textContent = theme == "light dark" ? "auto" : theme;
+        toggle.addEventListener("click", () => {
+            var meta = document.querySelector("meta[name='color-scheme']");
+            if (!meta) return;
+            if (!child) return;
+
+            const a = meta.getAttribute("content");
+            if (a === "dark") {
+                localStorage.setItem("theme", "light");
+                meta.setAttribute("content", "light");
+                child.textContent = "light";
+            } else if (a === "light") {
+                localStorage.setItem("theme", "light dark");
+                meta.setAttribute("content", "light dark");
+                child.textContent = "auto";
+            } else if (a === "light dark") {
+                localStorage.setItem("theme", "dark");
+                meta.setAttribute("content", "dark");
+                child.textContent = "dark";
+            }
+        });
+    });
+</script>
+
 <style>
+    .noise {
+        position: relative;
+        z-index: -1;
+        width: 100%;
+        height: 120%;
+    }
+
+    .noise {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='perlinNoise' baseFrequency='0.65' numOctaves='10' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.14'/%3E%3C/svg%3E");
+        pointer-events: none;
+    }
+
     * {
         margin: 0;
         font-family: var(--font-mutox);
@@ -166,6 +217,6 @@ const today = new Date();
 
     footer a {
         color: var(--accent-3-color);
-        text-shadow: rgb(120, 120, 120) 0 0 20px;
+        text-shadow: light-dark(rgb(220, 220, 220), rgb(120, 120, 120)) 0 0 20px;
     }
 </style>

@@ -35,9 +35,9 @@ const { title, href, src, style, img_style } = Astro.props;
     h4 {
         padding: 0;
         margin-bottom: 0.8em;
-        color: rgb(210, 190, 180);
-        text-shadow: rgb(100, 70, 0) 0 0 14px;
-        font-size: normal;
+        color: light-dark(rgb(110, 85, 60), rgb(210, 190, 180));
+        text-shadow: light-dark(rgb(210, 190, 180), rgb(100, 70, 0)) 0 0 14px;
+        font-weight: normal;
         text-align: center;
     }
     @media (max-width: 1000px) {
