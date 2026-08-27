@@ -93,7 +93,11 @@ const today = new Date();
     modeToggles.forEach((toggle) => {
         var child = toggle.firstElementChild;
         if (!child) return;
-        child.textContent = theme == "light dark" ? "auto" : theme;
+        if (theme == "") {
+            child.textContent = "auto";
+        } else {
+            child.textContent = theme == "light dark" ? "auto" : theme;
+        }
         toggle.addEventListener("click", () => {
             var meta = document.querySelector("meta[name='color-scheme']");
             if (!meta) return;
