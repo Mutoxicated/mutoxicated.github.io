@@ -1,0 +1,102 @@
+---
+import "../styles/global.css";
+
+const props = Astro.props;
+const { href, src, style, title, x_style, t_style, classes } = props;
+---
+
+<div class="exhibit" style={x_style}>
+    <div class="inner" style={style}>
+        <h4 style={t_style}>
+            {title}
+        </h4>
+        <div class="imgcontainer">
+            <a href={href} rel="noreferrer" target="_blank"><img src={src} /></a
+            >
+        </div>
+        <div class="figcontainer">
+            <figcaption style={t_style}>
+                <slot />
+            </figcaption>
+        </div>
+    </div>
+</div>
+
+<script>
+    var figcons = document.querySelectorAll(".figcontainer");
+    figcons.forEach((figcon) => {
+        console.log(figcon);
+        if (figcon) {
+            var figcap = figcon.children.item(0);
+            if (figcap && figcap.textContent == "") {
+                var parent = figcon.parentElement;
+                parent?.removeChild(figcon);
+            }
+        }
+    });
+</script>
+
+<style>
+    .exhibit {
+        place-content: center center;
+        display: grid;
+        border-width: 1px;
+        border-style: solid;
+        height: fit-content;
+        grid-auto-flow: dense;
+        animation: dropdown 0.07s linear;
+    }
+
+    @keyframes dropdown {
+        from {
+            transform: scaleY(0);
+        }
+        to {
+            transform: scaleY(1);
+        }
+    }
+    .inner {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        margin: 0.5em 0.5em;
+    }
+    .imgcontainer {
+        justify-content: center;
+        align-content: center;
+        padding: 0.5em 0.8em;
+    }
+    .figcontainer {
+        padding: 0.3em;
+    }
+    @keyframes tilt {
+        33% {
+            transform: rotate(1deg);
+        }
+        66% {
+            transform: rotate(-1deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 14px;
+        border: 2px solid white;
+        animation: tilt 0.3s linear;
+        animation-delay: 0.3s;
+    }
+    img:hover {
+        border-color: rgb(0, 200, 255);
+        box-shadow: rgb(0, 30, 180) 0 0 10px;
+    }
+    figcaption,
+    h4 {
+        text-align: center;
+        margin: 0.2em;
+        font-weight: normal;
+        font-size: 1.15em;
+    }
+</style>

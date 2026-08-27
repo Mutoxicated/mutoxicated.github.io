@@ -1,0 +1,161 @@
+---
+import "../styles/palette.css";
+import { Font } from "astro:assets";
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"a">;
+const { href } = Astro.props;
+
+const today = new Date();
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <Font cssVariable="--font-mutox" />
+        <title>Tenet</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div>
+                    <div class:list={["headerlink", { active: href === "/" }]}>
+                        <a href="/">Home</a>
+                    </div>
+                    <div
+                        class:list={[
+                            "headerlink",
+                            { active: href === "/blog" },
+                        ]}
+                    >
+                        <a href="/blog" >Blog</a>
+                    </div>
+                    <div
+                        class:list={[
+                            "headerlink",
+                            { active: href === "/portofolio" },
+                        ]}
+                    >
+                        <a href="/portofolio">Portofolio</a>
+                    </div>
+                </div>
+                <div>
+                    <a
+                        href="https://github.com/mutoxicated"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <svg
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            width="22"
+                            height="22"
+                            ><path
+                                fill="currentColor"
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                            ></path></svg
+                        >
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <img class="bg" src="/bg.png" />
+        <slot />
+    </body><footer>
+        <a>&copy; {today.getFullYear()} Mutoxicated. All rights reserved.</a>
+        <div></div>
+    </footer>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        font-family: var(--font-mutox);
+    }
+    body {
+        background-color: var(--bg-1-color);
+    }
+    h1 {
+        color: var(--accent-1-color);
+    }
+    h2 {
+        color: var(--accent-1-color);
+    }
+    a {
+        color: var(--accent-1-color);
+    }
+
+    .bg {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -2;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        background-color: var(--bg-2-color);
+        height: 3em;
+    }
+    nav div {
+        display: flex;
+        align-items: center;
+        padding: 0em 0.8em;
+    }
+    .headerlink {
+        border-bottom: 2px solid transparent;
+        height: 100%;
+    }
+
+    .unselectable {
+        user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+    }
+
+    nav .headerlink.active {
+        border-bottom-color: var(--accent-1-color);
+        background: linear-gradient(
+                transparent,
+                transparent,
+                transparent,
+                transparent,
+                var(--bg-3-color)
+            )
+            no-repeat;
+    }
+
+    nav a {
+        display: contents;
+        height: 100%;
+        font-size: 1.2em;
+        text-shadow: var(--accent-2-color) 0 0 20px;
+        text-decoration: none;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        nav a {
+            font-size: 1em;
+        }
+    }
+
+    footer {
+        text-align: center;
+        padding: 2.2em 1em 6em 1em;
+    }
+
+    footer a {
+        color: var(--accent-3-color);
+        text-shadow: rgb(120, 120, 120) 0 0 20px;
+    }
+</style>

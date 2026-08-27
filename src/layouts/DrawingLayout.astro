@@ -1,0 +1,53 @@
+---
+const { title, href, src, style, img_style } = Astro.props;
+---
+
+<div class="drawing_container" style={style}>
+    <h4>{title}</h4>
+    <a href={href} rel="noreferrer" target="_blank"
+        ><img src={src} style={img_style} /></a
+    >
+</div>
+
+<style>
+    .drawing_container {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        animation: appear 0.5s ease-out;
+    }
+    @keyframes appear {
+        0% {
+            transform: translateY(100vh);
+        }
+    }
+    @keyframes woo {
+        50% {
+            transform: scale(1.03);
+        }
+    }
+
+    img {
+        animation: woo 0.2s ease-in-out;
+        animation-delay: 0.7s;
+    }
+
+    h4 {
+        padding: 0;
+        margin-bottom: 0.8em;
+        color: rgb(210, 190, 180);
+        text-shadow: rgb(100, 70, 0) 0 0 14px;
+        font-size: normal;
+        text-align: center;
+    }
+    @media (max-width: 1000px) {
+        h4 {
+            font-size: 3.5vw;
+        }
+    }
+    @media (min-width: 1000px) {
+        h4 {
+            font-size: 1.15em;
+        }
+    }
+</style>

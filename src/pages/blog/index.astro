@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import "../../styles/palette.css";
+import "../../styles/global.css";
+---
+
+<BaseLayout href="/blog">
+    <div>
+        <h1>I ain't got no nun' yet!</h1>
+    </div>
+</BaseLayout>
+
+<style>
+    div {
+        display: flex;
+        justify-content: center;
+        padding-top: 120vh;
+    }
+    h1 {
+        color: var(--accent-1-color);
+        text-shadow: var(--accent-3-color) 0 0 20px;
+    }
+</style>

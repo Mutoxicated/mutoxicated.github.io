@@ -1,17 +1,100 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/palette.css";
+import FactsheetLayout from "../layouts/FactsheetLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout href="/">
+    <main>
+        <div>
+            <h1 class="mutox">
+                <span class="back">MM</span><span class="cyan">M</span><span
+                    class="bluecyan">U</span
+                ><span class="blue">T</span><span class="cyanpink">O</span><span
+                    class="pink">X</span
+                >
+                <span class="back"
+                    >XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span
+                >
+            </h1>
+        </div>
+        <div class="greeting">
+            <p>Hey there, I'm Alex, also known as MutoX.</p>
+            <p>I love challenging my creativity and bringing it to fruition.</p>
+            <p>In here you will find my blog spot and portofolio.</p>
+            <p>Check them out if you're interested!</p>
+        </div>
+        <FactsheetLayout />
+    </main>
+</BaseLayout>
+
+<style>
+    .back {
+        color: var(--bg-2-color);
+    }
+    .blue {
+        color: blue;
+        text-shadow: rgb(0, 0, 120) 0 0 20px;
+    }
+    .bluecyan {
+        color: rgb(0, 180, 255);
+        text-shadow: rgb(0, 50, 90) 0 0 20px;
+    }
+    .cyan {
+        color: cyan;
+        text-shadow: rgb(0, 70, 90) 0 0 20px;
+    }
+    .cyanpink {
+        color: rgb(140, 80, 160);
+        text-shadow: rgb(50, 10, 90) 0 0 20px;
+    }
+    .pink {
+        color: deeppink;
+        text-shadow: rgb(100, 10, 40) 0 0 20px;
+    }
+    .mutox {
+        font-family: var(--font-mutox);
+        padding: 0;
+        margin: 0;
+        text-overflow: clip;
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .mutox {
+            padding-top: 0.2em;
+            font-size: 2.2em;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        .mutox {
+            font-size: 6em;
+        }
+    }
+
+    .greeting {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 1000px) {
+        p {
+            color: var(--accent-1-color);
+            font-size: 0.8em;
+            text-shadow: var(--accent-3-color) 0 0 15px;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        p {
+            color: var(--accent-1-color);
+            font-size: 1.15em;
+            text-shadow: var(--accent-3-color) 0 0 15px;
+        }
+    }
+</style>

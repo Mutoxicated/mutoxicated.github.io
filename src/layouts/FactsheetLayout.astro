@@ -1,0 +1,132 @@
+---
+import "../styles/palette.css";
+import LinkLayout from "./LinkLayout.astro";
+import "../styles/global.css";
+---
+
+<body>
+    <div class="container">
+        <div class="factsheet">
+            <div>
+                <h4>From early on as a kid...</h4><p>
+                    I enjoyed programming. My first contact with a programming
+                    language was <span id="blue"><b>Lua</b></span>, as I used it
+                    to make custom levels for a mobile game called <LinkLayout
+                        id="pinky"
+                        href="https://pewpew.live/"
+                        >Pewpew
+                    </LinkLayout><span> </span>
+                    <LinkLayout id="cyan" href="https://pewpew.live/">
+                        Live</LinkLayout
+                    >. Playing my first level after finally finishing it was a
+                    moment of <i>pure joy</i>. That
+                    <span id="fire"> spark</span> of creativity planted a seed.
+                </p>
+            </div>
+            <div>
+                <h4>As time went on...</h4>
+                <p>
+                    the hobby kept going and the seed kept growing as I got
+                    interested in <span id="cyan">game development</span>.
+                    Trying to make games with <span id="lightgrey">Unity</span>,
+                    I learned <span id="green">C#</span> and <span id="cyan"
+                        >music composition</span
+                    >. That being said, I failed a lot, but each time I learned
+                    more and more and I came to learn how to utilize my failures
+                    to bring success.
+                </p>
+            </div>
+            <div>
+                <h4>Growing and evolving...</h4>
+                <p>
+                    I got interested in software engineering in general. With a
+                    couple of friends, we gathered as a team, the <span id="red"
+                        >H</span
+                    ><span id="pinky">y</span><span id="fire">b</span><span
+                        >r</span
+                    ><span id="cyan">o</span><span id="green">id</span>
+                    <span id="white"> Team</span>, and made a domain-specific
+                    programming language called <LinkLayout
+                        href="https://github.com/pewpewlive/hybroid-live"
+                        ><span id="red">H</span><span id="pinky">y</span><span
+                            id="fire">b</span
+                        ><span>r</span><span id="cyan">o</span><span id="green"
+                            >id</span
+                        ></LinkLayout
+                    >, which turned out very well. After that and a couple of
+                    small projects, we come to today. At this point in time I'm
+                    building my own game engine called
+                    <span id="greyed"> universe</span>, it's open source!
+                </p>
+            </div>
+            <div>
+                <h4>But that's not all!</h4>
+                <p>
+                    Throughout the course of this long-lasting programming
+                    excursion, I've also started and ended many hobbies. There
+                    <i> were</i> a few that stuck around though. <span
+                        id="pinky">Pixel art</span
+                    > was and still is an important hobby for me, with my first drawing
+                    being <span id="cyan">7 years ago</span>. Playing video
+                    games is also something I'll never get bored of, simply
+                    because it's a fun activity with friends and it <span
+                        id="fire"><i>inspires</i></span
+                    > me.
+                </p>
+            </div>
+            <div>
+                <h4>
+                    <span id="pinky"
+                        >If you've read up to this point, thank you and have a
+                        great day!</span
+                    >
+                </h4>
+            </div>
+        </div>
+    </div>
+</body>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+    .factsheet {
+        background-color: var(--bg-2-color);
+        display: grid;
+        border-radius: 14px;
+        border: 2px solid transparent;
+        border-color: deeppink;
+        box-shadow: rgb(120, 0, 50) 0 0 15px;
+        margin-top: 1em;
+    }
+
+    .factsheet div {
+        text-align: center;
+        margin: 0em 1.8em;
+    }
+    .factsheet div h4 {
+        font-size: 1.14em;
+        color: cyan;
+        text-shadow: rgb(0, 100, 180) 0 0 17px;
+    }
+    .factsheet div p,
+    a {
+        font-size: 1.1em;
+        color: rgb(110, 160, 230);
+    }
+
+    @media only screen and (max-width: 1000px) {
+        /* mobile */
+        .factsheet {
+            width: 90vw;
+        }
+    }
+
+    @media only screen and (min-width: 1000px) {
+        /* desktop */
+        .factsheet {
+            width: 60%;
+        }
+    }
+</style>
