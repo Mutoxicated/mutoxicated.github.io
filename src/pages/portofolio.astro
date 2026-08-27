@@ -1,0 +1,568 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Exhibit1Layout from "../layouts/Exhibit1Layout.astro";
+import DrawingLayout from "../layouts/DrawingLayout.astro";
+import "../styles/palette.css";
+import "../styles/global.css";
+import "../styles/exhibit.css";
+---
+
+<BaseLayout href="/portofolio">
+    <div class="hudcontainer">
+        <div class="hud">
+            <button class="child first">
+                <h5 class="unselectable">Programming</h5>
+            </button>
+            <button class="child"><h5 class="unselectable">Music</h5></button>
+            <button class="child last">
+                <h5 class="unselectable">Pixel art</h5>
+            </button>
+        </div>
+    </div>
+    <div id="portofolio">
+        <div class="programming">
+            <div class="programming_pc">
+                <Exhibit1Layout
+                    x_style="background-color: var(--ep-background-color); border-color: var(--ep-border-color); box-shadow: var(--ep-box-shadow);"
+                    t_style="color: var(--ep-text-color); text-shadow: var(--ep-text-shadow);"
+                    title="- Hyper 2 (COMING SOON) -"
+                    href="https://store.steampowered.com/app/3152630/HYPER_2"
+                    src="./imgs/sshyper.png"
+                    style="width:30em; height:auto;"
+                    >A rogue-like sorta-top-down endless tower defense games
+                    with arcadey graphics and unique game mechanics. Defend your
+                    tower for as long as you can from the invasive aliens! Level
+                    up, earn money and new units, and strategically place them
+                    in the grid for optimal performance! Let's see how long you
+                    last... Coming probably not soon to be honest.</Exhibit1Layout
+                >
+                <Exhibit1Layout
+                    x_style="background-color: var(--ep-background-color); border-color: var(--ep-border-color); box-shadow: var(--ep-box-shadow);"
+                    t_style="color: var(--ep-text-color); text-shadow: var(--ep-text-shadow);"
+                    title="- Blobby Balls -"
+                    href="https://tasty-kiwi.itch.io/blobby-balls"
+                    src="./imgs/bb.png"
+                    style="width:20em; height:auto;"
+                >
+                    A 2D pixel-art fast-paced precision puzzle-platformer game
+                    that me and 3 other friends made in 10-days for the Godot
+                    Wild Jam #83, using, as you can imagine, the Godot game
+                    engine. You have a myriad of levels to complete, the goal
+                    being to consume all the red balls, which can become quite
+                    mind-racking in some levels. Eat your way into solving
+                    puzzle and get rewarded with speedrun medals in the process!
+                </Exhibit1Layout>
+                <Exhibit1Layout
+                    x_style="background-color: var(--ep-background-color); border-color: var(--ep-border-color); box-shadow: var(--ep-box-shadow);"
+                    t_style="color: var(--ep-text-color); text-shadow: var(--ep-text-shadow);"
+                    title="- Hybroid Live -"
+                    href="https://hybroid.pewpew.live/hybroid-live/"
+                    src="./imgs/hybroid.png"
+                    style="width:20em; height:auto;"
+                    >A domain-specific programming language, handcrafted for
+                    making PewPew Live levels. It's strongly-typed and provides
+                    a variety of features that most modern languages have, while
+                    also providing special features like repeat statements,
+                    better for loops and tick statements. If you don't want to
+                    have a headache making PewPew Live levels, this is the go-to
+                    language!</Exhibit1Layout
+                >
+            </div>
+            <div class="programming_mob">
+                <div class="flexcon">
+                    <Exhibit1Layout
+                        x_style="background-color: var(--ep-background-color); border-color: var(--ep-border-color); box-shadow: var(--ep-box-shadow);"
+                        t_style="color: var(--ep-text-color); text-shadow: var(--ep-text-shadow);"
+                        title="- Hyper 2 (COMING SOON) -"
+                        href="https://store.steampowered.com/app/3152630/HYPER_2"
+                        src="./imgs/sshyper.png"
+                        style="width:max(0em, min(88vw, 40em)); height:auto;"
+                        >A rogue-like sorta-top-down endless tower defense games
+                        with arcadey graphics and unique game mechanics. Defend
+                        your tower for as long as you can from the invasive
+                        aliens! Level up, earn money and new units, and
+                        strategically place them in the grid for optimal
+                        performance! Let's see how long you last... Coming
+                        probably not soon to be honest.</Exhibit1Layout
+                    >
+                </div>
+                <div class="flexcon">
+                    <Exhibit1Layout
+                        x_style="background-color: var(--ep-background-color); border-color: var(--ep-border-color); box-shadow: var(--ep-box-shadow);"
+                        t_style="color: var(--ep-text-color); text-shadow: var(--ep-text-shadow);"
+                        title="- Blobby Balls -"
+                        href="https://tasty-kiwi.itch.io/blobby-balls"
+                        src="./imgs/bb.png"
+                        style="width:max(0em, min(88vw, 30em)); height:auto;"
+                    >
+                        A 2D pixel-art fast-paced precision puzzle-platformer
+                        game that me and 3 other friends made in 10-days for the
+                        Godot Wild Jam #83, using, as you can imagine, the Godot
+                        game engine. You have a myriad of levels to complete,
+                        the goal being to consume all the red balls, which can
+                        become quite mind-racking in some levels. Eat your way
+                        into solving puzzle and get rewarded with speedrun
+                        medals in the process!
+                    </Exhibit1Layout>
+                </div>
+                <div class="flexcon">
+                    <Exhibit1Layout
+                        x_style="background-color: var(--ep-background-color); border-color: var(--ep-border-color); box-shadow: var(--ep-box-shadow);"
+                        t_style="color: var(--ep-text-color); text-shadow: var(--ep-text-shadow);"
+                        title="- Hybroid Live -"
+                        href="https://hybroid.pewpew.live/hybroid-live/"
+                        src="./imgs/hybroid.png"
+                        style="width:max(0em, min(88vw, 30em)); height:auto;"
+                        >A domain-specific programming language, handcrafted for
+                        making PewPew Live levels. It's strongly-typed and
+                        provides a variety of features that most modern
+                        languages have, while also providing special features
+                        like repeat statements, better for loops and tick
+                        statements. If you don't want to have a headache making
+                        PewPew Live levels, this is the go-to language!</Exhibit1Layout
+                    >
+                </div>
+            </div>
+        </div>
+        <div class="music">
+            <div class="music_ pc">
+                <Exhibit1Layout
+                    x_style="background-color: var(--er-background-color); border-color: var(--er-border-color); box-shadow: var(--er-box-shadow);"
+                    t_style="color: var(--er-text-color); text-shadow: var(--er-text-shadow);"
+                    title="- Tactical Processing (Single) -"
+                    href="https://www.youtube.com/watch?v=RDEUjbaovg0&ab_channel=XOTUM"
+                    src="./imgs/bbtitlecover.png"
+                    style="width:22.35em; height:auto;"
+                    >A track made for a game me and some friends were making for
+                    a 10-day game jam. I really like not only how it fits the
+                    game, but also the vibes it gives off as a chill but kind of
+                    intense dnb track (World's Hardest Game-type song). It was
+                    also interesting having a hard time-restriction while making
+                    it, although it proved really not that difficult, as it was
+                    composed and mixed very early on and in just 4 days, which
+                    is probably why it's only 2 minutes, but yeah.</Exhibit1Layout
+                >
+                <Exhibit1Layout
+                    x_style="background-color: var(--er-background-color); border-color: var(--er-border-color); box-shadow: var(--er-box-shadow);"
+                    t_style="color: var(--er-text-color); text-shadow: var(--er-text-shadow);"
+                    title="- Robotic Warfare (Single) -"
+                    href="https://youtu.be/e53jIaszucA"
+                    src="./imgs/rw.png"
+                    style="width:21em; height:auto;"
+                >
+                    A Single for the HYPER 2 OST. I wanted to really capture the
+                    feeling you get when a game becomes crazy and it overwhelms
+                    you with a barrage of enemies and mechanics, so that's what
+                    this track is all about. My favorite part is the bridge at
+                    1:15, specifically when the synth becomes all distorted and
+                    the harsh drums kick in.
+                </Exhibit1Layout>
+                <Exhibit1Layout
+                    x_style="background-color: var(--er-background-color); border-color: var(--er-border-color); box-shadow: var(--er-box-shadow);"
+                    t_style="color: var(--er-text-color); text-shadow: var(--er-text-shadow);"
+                    title="- HUE (Album) -"
+                    href="https://youtube.com/playlist?list=PLZ3UaujbEAyho767VwxWJ6XxQsvYiP1Ni"
+                    src="./imgs/hue.jpg"
+                    style="width:21em; height:auto;"
+                    >A debut album containing mostly electronic music. The
+                    original idea was 7 tracks, each representing a different
+                    hue in the color spectrum, but along the journey 3 bonus
+                    tracks were added (one of which will soon get it's official
+                    video). All together it's a 45-minute listen. I recommend
+                    you play the tracks in the order they are presented in. Hope
+                    you like it! My favorite ones are Purple, Pink and Green.</Exhibit1Layout
+                >
+                <Exhibit1Layout
+                    x_style="background-color: var(--er-background-color); border-color: var(--er-border-color); box-shadow: var(--er-box-shadow);"
+                    t_style="color: var(--er-text-color); text-shadow: var(--er-text-shadow);"
+                    title="- GOT MY EYES OPEN (Single) -"
+                    href="https://youtu.be/FHVtduKKYZY?si=9Wvye4HLaFjjMLhm"
+                    src="./imgs/gmeo.png"
+                    style="width:21em; height:auto;"
+                    >This track is one of my best ones I feel like. It drew
+                    inspiration from an album called IGOR and it was unlike
+                    anything I had made before not only structurally (more of a
+                    build-up track, has two parts to it), but also in terms of
+                    genre, which made it feel like a breath of fresh air from my
+                    usual EDM-oriented style. For these reasons and also because
+                    the mixing was really good (nice job, past me), it has
+                    really grown on me.</Exhibit1Layout
+                >
+            </div>
+            <div class="music_ mob">
+                <Exhibit1Layout
+                    x_style="background-color: var(--er-background-color); border-color: var(--er-border-color); box-shadow: var(--er-box-shadow);"
+                    t_style="color: var(--er-text-color); text-shadow: var(--er-text-shadow);"
+                    title="- Tactical Processing (Single) -"
+                    href="https://www.youtube.com/watch?v=RDEUjbaovg0&ab_channel=XOTUM"
+                    src="./imgs/bbtitlecover.png"
+                    style="width:72vw; height:auto;"
+                    >A track made for a game me and some friends were making for
+                    a 10-day game jam. I really like not only how it fits the
+                    game, but also the vibes it gives off as a chill but kind of
+                    intense dnb track (World's Hardest Game-type song). It was
+                    also interesting having a hard time-restriction while making
+                    it, although it proved really not that difficult, as it was
+                    composed and mixed very early on and in just 4 days, which
+                    is probably why it's only 2 minutes, but yeah.</Exhibit1Layout
+                >
+                <Exhibit1Layout
+                    x_style="background-color: var(--er-background-color); border-color: var(--er-border-color); box-shadow: var(--er-box-shadow);"
+                    t_style="color: var(--er-text-color); text-shadow: var(--er-text-shadow);"
+                    title="- Robotic Warfare (Single) -"
+                    href="https://youtu.be/e53jIaszucA"
+                    src="./imgs/rw.png"
+                    style="width:72vw; height:auto;"
+                >
+                    A Single for the HYPER 2 OST. I wanted to really capture the
+                    feeling you get when a game becomes crazy and it overwhelms
+                    you with a barrage of enemies and mechanics, so that's what
+                    this track is all about. My favorite part is the bridge at
+                    1:15, specifically when the synth becomes all distorted and
+                    the harsh drums kick in.
+                </Exhibit1Layout>
+                <Exhibit1Layout
+                    x_style="background-color: var(--er-background-color); border-color: var(--er-border-color); box-shadow: var(--er-box-shadow);"
+                    t_style="color: var(--er-text-color); text-shadow: var(--er-text-shadow);"
+                    title="- HUE (Album) -"
+                    href="https://youtube.com/playlist?list=PLZ3UaujbEAyho767VwxWJ6XxQsvYiP1Ni"
+                    src="./imgs/hue.jpg"
+                    style="width:72vw; height:auto;"
+                    >A debut album containing mostly electronic music. The
+                    original idea was 7 tracks, each representing a different
+                    hue in the color spectrum, but along the journey 3 bonus
+                    tracks were added (one of which will soon get it's official
+                    video). All together it's a 45-minute listen. I recommend
+                    you play the tracks in the order they are presented in. Hope
+                    you like it! My favorite ones are Purple, Pink and Green.</Exhibit1Layout
+                >
+                <Exhibit1Layout
+                    x_style="background-color: var(--er-background-color); border-color: var(--er-border-color); box-shadow: var(--er-box-shadow);"
+                    t_style="color: var(--er-text-color); text-shadow: var(--er-text-shadow);"
+                    title="- GOT MY EYES OPEN (Single) -"
+                    href="https://youtu.be/FHVtduKKYZY?si=9Wvye4HLaFjjMLhm"
+                    src="./imgs/gmeo.png"
+                    style="width:72vw; height:auto;"
+                    >This track is one of my best ones I feel like. It drew
+                    inspiration from an album called IGOR and it was unlike
+                    anything I had made before not only structurally (more of a
+                    build-up track, has two parts to it), but also in terms of
+                    genre, which made it feel like a breath of fresh air from my
+                    usual EDM-oriented style. For these reasons and also because
+                    the mixing was really good (nice job, past me), it has
+                    really grown on me.</Exhibit1Layout
+                >
+            </div>
+        </div>
+        <div class="pixel_art">
+            <div class="pixel_art_pc">
+                <div class="flexcon">
+                    <DrawingLayout
+                        title="- Panopticon (aka A Mess) -"
+                        src="./drawings/panopticon.png"
+                        href="https://www.pixilart.com/art/a-mess-sr26cd2c314fa90?ft=user&ft_id=624167"
+                        img_style="height:26em; width:auto;"
+                    />
+                </div>
+                <div class="flexcon">
+                    <DrawingLayout
+                        title="- Fraulein Humpsch -"
+                        src="./drawings/fh.png"
+                        href="https://www.pixilart.com/art/fraulein-humpsch-sr5z079304483daws3"
+                        img_style="height:26em; width:auto;"
+                    />
+                    <DrawingLayout
+                        title="- Alien Aquatic -"
+                        src="./drawings/alien_aquatic.png"
+                        href="https://www.pixilart.com/art/alien-aquatic-sr265c8bdb034c8?ft=user&ft_id=624167"
+                        img_style="height:26em; width:auto;"
+                    />
+                </div>
+                <div class="flexcon">
+                    <DrawingLayout
+                        title="- Falcon 9 -"
+                        src="./drawings/falcon9.png"
+                        href="https://www.pixilart.com/art/falcon-9-46532baca4e7fbf?ft=user&ft_id=624167"
+                        img_style="height:26em; width:auto;"
+                    />
+
+                    <DrawingLayout
+                        title="- Ophanim -"
+                        src="./drawings/ophanim.png"
+                        href="https://www.pixilart.com/art/ophanim-angel-afa429beef5df75?ft=user&ft_id=624167"
+                        img_style="height:26em; width:auto;"
+                    />
+                </div>
+                <div class="flexcon">
+                    <DrawingLayout
+                        title="- Something -"
+                        src="./drawings/something.gif"
+                        href="https://www.pixilart.com/art/something-bcec62ba62943b1?ft=user&ft_id=624167"
+                        img_style="height:36em; width:auto;"
+                    />
+                    <DrawingLayout
+                        title="- A Picture In Motion -"
+                        src="./drawings/apim.gif"
+                        href="https://www.pixilart.com/art/uh-f807ffeeac68?ft=user&ft_id=624167"
+                        img_style="height:26em; width:auto;"
+                    />
+                </div>
+            </div>
+            <div class="pixel_art_mob">
+                <div class="flexcon">
+                    <DrawingLayout
+                        title="- Panopticon (aka A Mess) -"
+                        src="./drawings/panopticon.png"
+                        href="https://www.pixilart.com/art/a-mess-sr26cd2c314fa90?ft=user&ft_id=624167"
+                        img_style="height:36vw; width:auto;"
+                    />
+                </div>
+                <div class="flexcon">
+                    <DrawingLayout
+                        title="- Fraulein Humpsch -"
+                        href="https://www.pixilart.com/art/fraulein-humpsch-sr5z079304483daws3"
+                        src="./drawings/fh.png"
+                        img_style="height:44vw; width:auto;"
+                    />
+                    <DrawingLayout
+                        title="- Ophanim -"
+                        href="https://www.pixilart.com/art/ophanim-angel-afa429beef5df75?ft=user&ft_id=624167"
+                        src="./drawings/ophanim.png"
+                        img_style="height:44vw; width:auto;"
+                    />
+                </div>
+                <div class="flexcon">
+                    <DrawingLayout
+                        title="- Falcon 9 -"
+                        href="https://www.pixilart.com/art/falcon-9-46532baca4e7fbf?ft=user&ft_id=624167"
+                        src="./drawings/falcon9.png"
+                        img_style="height:44vw; width:auto;"
+                    />
+                </div>
+                <div class="flexcon">
+                    <DrawingLayout
+                        title="- Alien Aquatic -"
+                        href="https://www.pixilart.com/art/alien-aquatic-sr265c8bdb034c8?ft=user&ft_id=624167"
+                        src="./drawings/alien_aquatic.png"
+                        img_style="height:44vw; width:auto;"
+                    />
+                </div>
+                <div class="flexcon">
+                    <DrawingLayout
+                        title="- Something -"
+                        href="https://www.pixilart.com/art/something-bcec62ba62943b1?ft=user&ft_id=624167"
+                        src="./drawings/something.gif"
+                        img_style="height:54vw; width:auto;"
+                    />
+                    <DrawingLayout
+                        title="- A Picture In Motion -"
+                        href="https://www.pixilart.com/art/uh-f807ffeeac68?ft=user&ft_id=624167"
+                        src="./drawings/apim.gif"
+                        img_style="height:44vw; width:auto;"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="misc"></div>
+    </div>
+</BaseLayout>
+<script>
+    function change_hud(
+        element_clicked: string,
+        portofolio: Element,
+        button: Element,
+    ) {
+        button.classList.add("active");
+        button.classList.add("unselectable");
+        for (const child of portofolio.children) {
+            if (!child.classList.contains("hide")) {
+                child.classList.add("hide");
+            }
+        }
+        switch (element_clicked) {
+            case "Programming":
+                portofolio
+                    .querySelector(".programming")
+                    ?.classList.remove("hide");
+                break;
+            case "Music":
+                portofolio.querySelector(".music")?.classList.remove("hide");
+                break;
+            case "Pixel art":
+                portofolio
+                    .querySelector(".pixel_art")
+                    ?.classList.remove("hide");
+                break;
+            case "Misc":
+                portofolio.querySelector(".misc")?.classList.remove("hide");
+                break;
+        }
+    }
+    const portofolio_div = document.getElementById("portofolio");
+    const buttons = document.querySelectorAll("button.child");
+    buttons.forEach((button) => {
+        if (!portofolio_div) {
+            return;
+        }
+        button.addEventListener("click", () => {
+            const text = button.querySelector("h5")?.textContent;
+            if (!text) {
+                return;
+            }
+
+            buttons.forEach((button) => {
+                button.classList.remove("active");
+                button.classList.remove("unselectable");
+            });
+            change_hud(text, portofolio_div, button);
+        });
+        const text = button.querySelector("h5")?.textContent;
+        if (!text) {
+            return;
+        }
+        if (text === "Programming") {
+            change_hud(text, portofolio_div, button);
+            button.classList.add("active");
+            button.classList.add("unselectable");
+        }
+    });
+</script>
+<style>
+    button {
+        background-color: transparent;
+        border-color: transparent;
+        font-family: inherit;
+        font-size: inherit;
+    }
+    .hudcontainer {
+        display: flex;
+        justify-content: center;
+        margin: 2em 2em;
+    }
+    .hud {
+        width: 40em;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-radius: 14px;
+        box-shadow: rgb(150, 30, 0) 0 0 20px;
+    }
+
+    .child:hover {
+        border-color: yellow;
+    }
+
+    .child:active {
+        border-color: rgb(250, 0, 150);
+    }
+
+    .child:active h5 {
+        color: rgb(250, 0, 150);
+        text-shadow: rgb(200, 100, 180) 0 0 19px;
+    }
+    .child.active {
+        border-color: yellow;
+    }
+
+    .child {
+        border-width: 2px 1px 2px 1px;
+        border-color: rgb(255, 130, 60);
+        border-style: solid;
+        background-color: var(--bg-2-color);
+        text-align: center;
+    }
+
+    .child.first {
+        border-width: 2px 1px 2px 2px;
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 14px;
+    }
+    .child.last {
+        border-width: 2px 2px 2px 1px;
+        border-top-right-radius: 14px;
+        border-bottom-right-radius: 14px;
+    }
+    h5 {
+        margin: 0.8em 1em 0.8em 1em;
+        color: rgb(220, 190, 110);
+        text-shadow: rgb(200, 200, 180) 0 0 14px;
+        font-weight: normal;
+        padding: 0;
+    }
+    @media screen and (max-width: 1000px) {
+        h5 {
+            font-size: 1em;
+        }
+    }
+    @media screen and (min-width: 1000px) {
+        h5 {
+            font-size: 1.1em;
+        }
+    }
+    .hide {
+        display: none !important;
+    }
+    .programming {
+    }
+    @media screen and (max-width: 1200px) {
+        .programming_pc {
+            display: none;
+        }
+        .programming_mob {
+            display: block;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        .programming_pc {
+            display: flex;
+            justify-content: center;
+        }
+        .programming_mob {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 1150px) {
+        .pixel_art_pc {
+            display: none;
+        }
+        .pixel_art_mob {
+            display: block;
+        }
+    }
+    @media screen and (min-width: 1150px) {
+        .pixel_art_pc {
+            display: block;
+        }
+        .pixel_art_mob {
+            display: none;
+        }
+    }
+    .flexcon {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .music_ {
+        display: grid;
+        grid-auto-flow: dense;
+        justify-items: stretch;
+        align-items: stretch;
+        justify-content: center;
+        align-content: stretch;
+    }
+
+    @media screen and (min-width: 800px) {
+        .music_ {
+            grid-template-columns: auto auto;
+        }
+        .pc {
+            display: grid;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .music_ {
+            grid-template-columns: auto;
+        }
+        .pc {
+            display: none !important;
+    }
+</style>

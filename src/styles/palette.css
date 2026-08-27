@@ -1,0 +1,11 @@
+
+/* Dark Palette 1 */
+:root {
+    --bg-1-color: rgb(8, 4, 13);
+    --bg-2-color: rgb(15, 12, 40);
+    --bg-3-color: rgb(30, 55, 80);
+    --accent-1-color: rgb(200, 190, 200);
+    --accent-2-color: rgb(160, 160, 170);
+    --accent-3-color: rgb(120, 120, 135);
+    --spice-1-color: rgb(15, 25, 40);
+}

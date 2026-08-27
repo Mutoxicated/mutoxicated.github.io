@@ -1,0 +1,13 @@
+:root {
+    --ep-background-color: rgba(170, 0, 250, 0.05);
+    --ep-border-color: rgb(190, 0, 230);
+    --ep-box-shadow:rgb(40, 0, 80) 0 0 20px;
+    --ep-text-color: rgb(205, 190, 225);
+    --ep-text-shadow: rgb(120, 80, 180) 0 0 14px;
+
+    --er-background-color: rgba(240, 0, 0, 0.05);
+    --er-border-color: rgb(250, 60, 60);
+    --er-box-shadow:rgb(100, 0, 0) 0 0 20px;
+    --er-text-color: rgb(225, 170, 170);
+    --er-text-shadow: rgb(130, 0, 0) 0 0 14px;
+}
