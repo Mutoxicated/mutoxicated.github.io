@@ -1,8 +1,12 @@
 ---
 import "../styles/global.css";
+import { Image } from "astro:assets";
 
 const props = Astro.props;
-const { href, src, style, title, x_style, t_style, classes } = props;
+const { href, src, style, title, x_style, t_style, classes, width, height } =
+    props;
+const loading = props.loading ?? "lazy";
+const fetchpriority = props.fetchpriority ?? "auto";
 ---
 
 <div class="exhibit" style={x_style}>
@@ -11,8 +15,17 @@ const { href, src, style, title, x_style, t_style, classes } = props;
             {title}
         </h4>
         <div class="imgcontainer">
-            <a href={href} rel="noreferrer" target="_blank"><img src={src} /></a
-            >
+            <a href={href} rel="noreferrer" target="_blank"
+                ><Image
+                    src={src}
+                    width={width}
+                    height={height}
+                    loading={loading}
+                    fetchpriority={fetchpriority}
+                    decoding="async"
+                    alt={title}
+                ></Image
+            ></a>
         </div>
         <div class="figcontainer">
             <figcaption style={t_style}>

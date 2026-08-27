@@ -5,6 +5,21 @@ import DrawingLayout from "../layouts/DrawingLayout.astro";
 import "../styles/palette.css";
 import "../styles/global.css";
 import "../styles/exhibit.css";
+
+import sspImg from "../assets/imgs/sshyper.png";
+import bb from "../assets/imgs/bb.png";
+import hybroid from "../assets/imgs/hybroid.png";
+import bbtitlecover from "../assets/imgs/bbtitlecover.png";
+import rw from "../assets/imgs/rw.png";
+import hue from "../assets/imgs/hue.jpg";
+import gmeo from "../assets/imgs/gmeo.png";
+import panopticon from "../assets/drawings/panopticon.png";
+import fh from "../assets/drawings/fh.png";
+import alien_aquatic from "../assets/drawings/alien_aquatic.png";
+import falconImg from "../assets/drawings/falcon9.png";
+import ophanim from "../assets/drawings/ophanim.png";
+import something from "../assets/drawings/something.gif";
+import apim from "../assets/drawings/apim.gif";
 ---
 
 <BaseLayout href="/portofolio">
@@ -27,7 +42,9 @@ import "../styles/exhibit.css";
                     t_style="color: var(--ep-text-color); text-shadow: var(--ep-text-shadow);"
                     title="- Hyper 2 (COMING SOON) -"
                     href="https://store.steampowered.com/app/3152630/HYPER_2"
-                    src="/imgs/sshyper.png"
+                    src={sspImg}
+                    fetchpriority="high"
+                    loading="eager"
                     style="width:30em; height:auto;"
                     >A rogue-like sorta-top-down endless tower defense games
                     with arcadey graphics and unique game mechanics. Defend your
@@ -41,7 +58,9 @@ import "../styles/exhibit.css";
                     t_style="color: var(--ep-text-color); text-shadow: var(--ep-text-shadow);"
                     title="- Blobby Balls -"
                     href="https://tasty-kiwi.itch.io/blobby-balls"
-                    src="/imgs/bb.png"
+                    src={bb}
+                    fetchpriority="high"
+                    loading="eager"
                     style="width:20em; height:auto;"
                 >
                     A 2D pixel-art fast-paced precision puzzle-platformer game
@@ -57,7 +76,9 @@ import "../styles/exhibit.css";
                     t_style="color: var(--ep-text-color); text-shadow: var(--ep-text-shadow);"
                     title="- Hybroid Live -"
                     href="https://hybroid.pewpew.live/hybroid-live/"
-                    src="/imgs/hybroid.png"
+                    src={hybroid}
+                    fetchpriority="high"
+                    loading="eager"
                     style="width:20em; height:auto;"
                     >A domain-specific programming language, handcrafted for
                     making PewPew Live levels. It's strongly-typed and provides
@@ -75,7 +96,7 @@ import "../styles/exhibit.css";
                         t_style="color: var(--ep-text-color); text-shadow: var(--ep-text-shadow);"
                         title="- Hyper 2 (COMING SOON) -"
                         href="https://store.steampowered.com/app/3152630/HYPER_2"
-                        src="/imgs/sshyper.png"
+                        src={sspImg}
                         style="width:max(0em, min(88vw, 40em)); height:auto;"
                         >A rogue-like sorta-top-down endless tower defense games
                         with arcadey graphics and unique game mechanics. Defend
@@ -92,7 +113,7 @@ import "../styles/exhibit.css";
                         t_style="color: var(--ep-text-color); text-shadow: var(--ep-text-shadow);"
                         title="- Blobby Balls -"
                         href="https://tasty-kiwi.itch.io/blobby-balls"
-                        src="/imgs/bb.png"
+                        src={bb}
                         style="width:max(0em, min(88vw, 30em)); height:auto;"
                     >
                         A 2D pixel-art fast-paced precision puzzle-platformer
@@ -111,7 +132,7 @@ import "../styles/exhibit.css";
                         t_style="color: var(--ep-text-color); text-shadow: var(--ep-text-shadow);"
                         title="- Hybroid Live -"
                         href="https://hybroid.pewpew.live/hybroid-live/"
-                        src="/imgs/hybroid.png"
+                        src={hybroid}
                         style="width:max(0em, min(88vw, 30em)); height:auto;"
                         >A domain-specific programming language, handcrafted for
                         making PewPew Live levels. It's strongly-typed and
@@ -131,7 +152,7 @@ import "../styles/exhibit.css";
                     t_style="color: var(--er-text-color); text-shadow: var(--er-text-shadow);"
                     title="- Tactical Processing (Single) -"
                     href="https://www.youtube.com/watch?v=RDEUjbaovg0&ab_channel=XOTUM"
-                    src="/imgs/bbtitlecover.png"
+                    src={bbtitlecover}
                     style="width:22.35em; height:auto;"
                     >A track made for a game me and some friends were making for
                     a 10-day game jam. I really like not only how it fits the
@@ -147,7 +168,7 @@ import "../styles/exhibit.css";
                     t_style="color: var(--er-text-color); text-shadow: var(--er-text-shadow);"
                     title="- Robotic Warfare (Single) -"
                     href="https://youtu.be/e53jIaszucA"
-                    src="/imgs/rw.png"
+                    src={rw}
                     style="width:21em; height:auto;"
                 >
                     A Single for the HYPER 2 OST. I wanted to really capture the
@@ -162,7 +183,7 @@ import "../styles/exhibit.css";
                     t_style="color: var(--er-text-color); text-shadow: var(--er-text-shadow);"
                     title="- HUE (Album) -"
                     href="https://youtube.com/playlist?list=PLZ3UaujbEAyho767VwxWJ6XxQsvYiP1Ni"
-                    src="/imgs/hue.jpg"
+                    src={hue}
                     style="width:21em; height:auto;"
                     >A debut album containing mostly electronic music. The
                     original idea was 7 tracks, each representing a different
@@ -177,7 +198,7 @@ import "../styles/exhibit.css";
                     t_style="color: var(--er-text-color); text-shadow: var(--er-text-shadow);"
                     title="- GOT MY EYES OPEN (Single) -"
                     href="https://youtu.be/FHVtduKKYZY?si=9Wvye4HLaFjjMLhm"
-                    src="/imgs/gmeo.png"
+                    src={gmeo}
                     style="width:21em; height:auto;"
                     >This track is one of my best ones I feel like. It drew
                     inspiration from an album called IGOR and it was unlike
@@ -195,7 +216,7 @@ import "../styles/exhibit.css";
                     t_style="color: var(--er-text-color); text-shadow: var(--er-text-shadow);"
                     title="- Tactical Processing (Single) -"
                     href="https://www.youtube.com/watch?v=RDEUjbaovg0&ab_channel=XOTUM"
-                    src="/imgs/bbtitlecover.png"
+                    src={bbtitlecover}
                     style="width:72vw; height:auto;"
                     >A track made for a game me and some friends were making for
                     a 10-day game jam. I really like not only how it fits the
@@ -211,7 +232,7 @@ import "../styles/exhibit.css";
                     t_style="color: var(--er-text-color); text-shadow: var(--er-text-shadow);"
                     title="- Robotic Warfare (Single) -"
                     href="https://youtu.be/e53jIaszucA"
-                    src="/imgs/rw.png"
+                    src={rw}
                     style="width:72vw; height:auto;"
                 >
                     A Single for the HYPER 2 OST. I wanted to really capture the
@@ -226,7 +247,7 @@ import "../styles/exhibit.css";
                     t_style="color: var(--er-text-color); text-shadow: var(--er-text-shadow);"
                     title="- HUE (Album) -"
                     href="https://youtube.com/playlist?list=PLZ3UaujbEAyho767VwxWJ6XxQsvYiP1Ni"
-                    src="/imgs/hue.jpg"
+                    src={hue}
                     style="width:72vw; height:auto;"
                     >A debut album containing mostly electronic music. The
                     original idea was 7 tracks, each representing a different
@@ -241,7 +262,7 @@ import "../styles/exhibit.css";
                     t_style="color: var(--er-text-color); text-shadow: var(--er-text-shadow);"
                     title="- GOT MY EYES OPEN (Single) -"
                     href="https://youtu.be/FHVtduKKYZY?si=9Wvye4HLaFjjMLhm"
-                    src="/imgs/gmeo.png"
+                    src={gmeo}
                     style="width:72vw; height:auto;"
                     >This track is one of my best ones I feel like. It drew
                     inspiration from an album called IGOR and it was unlike
@@ -259,7 +280,7 @@ import "../styles/exhibit.css";
                 <div class="flexcon">
                     <DrawingLayout
                         title="- Panopticon (aka A Mess) -"
-                        src="/drawings/panopticon.png"
+                        src={panopticon}
                         href="https://www.pixilart.com/art/a-mess-sr26cd2c314fa90?ft=user&ft_id=624167"
                         img_style="height:26em; width:auto;"
                     />
@@ -267,13 +288,13 @@ import "../styles/exhibit.css";
                 <div class="flexcon">
                     <DrawingLayout
                         title="- Fraulein Humpsch -"
-                        src="/drawings/fh.png"
+                        src={fh}
                         href="https://www.pixilart.com/art/fraulein-humpsch-sr5z079304483daws3"
                         img_style="height:26em; width:auto;"
                     />
                     <DrawingLayout
                         title="- Alien Aquatic -"
-                        src="/drawings/alien_aquatic.png"
+                        src={alien_aquatic}
                         href="https://www.pixilart.com/art/alien-aquatic-sr265c8bdb034c8?ft=user&ft_id=624167"
                         img_style="height:26em; width:auto;"
                     />
@@ -281,14 +302,14 @@ import "../styles/exhibit.css";
                 <div class="flexcon">
                     <DrawingLayout
                         title="- Falcon 9 -"
-                        src="/drawings/falcon9.png"
+                        src={falconImg}
                         href="https://www.pixilart.com/art/falcon-9-46532baca4e7fbf?ft=user&ft_id=624167"
                         img_style="height:26em; width:auto;"
                     />
 
                     <DrawingLayout
                         title="- Ophanim -"
-                        src="/drawings/ophanim.png"
+                        src={ophanim}
                         href="https://www.pixilart.com/art/ophanim-angel-afa429beef5df75?ft=user&ft_id=624167"
                         img_style="height:26em; width:auto;"
                     />
@@ -296,13 +317,13 @@ import "../styles/exhibit.css";
                 <div class="flexcon">
                     <DrawingLayout
                         title="- Something -"
-                        src="/drawings/something.gif"
+                        src={something}
                         href="https://www.pixilart.com/art/something-bcec62ba62943b1?ft=user&ft_id=624167"
                         img_style="height:36em; width:auto;"
                     />
                     <DrawingLayout
                         title="- A Picture In Motion -"
-                        src="/drawings/apim.gif"
+                        src={apim}
                         href="https://www.pixilart.com/art/uh-f807ffeeac68?ft=user&ft_id=624167"
                         img_style="height:26em; width:auto;"
                     />
@@ -312,7 +333,7 @@ import "../styles/exhibit.css";
                 <div class="flexcon">
                     <DrawingLayout
                         title="- Panopticon (aka A Mess) -"
-                        src="/drawings/panopticon.png"
+                        src={panopticon}
                         href="https://www.pixilart.com/art/a-mess-sr26cd2c314fa90?ft=user&ft_id=624167"
                         img_style="height:36vw; width:auto;"
                     />
@@ -321,13 +342,13 @@ import "../styles/exhibit.css";
                     <DrawingLayout
                         title="- Fraulein Humpsch -"
                         href="https://www.pixilart.com/art/fraulein-humpsch-sr5z079304483daws3"
-                        src="/drawings/fh.png"
+                        src={fh}
                         img_style="height:44vw; width:auto;"
                     />
                     <DrawingLayout
                         title="- Ophanim -"
                         href="https://www.pixilart.com/art/ophanim-angel-afa429beef5df75?ft=user&ft_id=624167"
-                        src="/drawings/ophanim.png"
+                        src={ophanim}
                         img_style="height:44vw; width:auto;"
                     />
                 </div>
@@ -335,7 +356,7 @@ import "../styles/exhibit.css";
                     <DrawingLayout
                         title="- Falcon 9 -"
                         href="https://www.pixilart.com/art/falcon-9-46532baca4e7fbf?ft=user&ft_id=624167"
-                        src="/drawings/falcon9.png"
+                        src={falconImg}
                         img_style="height:44vw; width:auto;"
                     />
                 </div>
@@ -343,7 +364,7 @@ import "../styles/exhibit.css";
                     <DrawingLayout
                         title="- Alien Aquatic -"
                         href="https://www.pixilart.com/art/alien-aquatic-sr265c8bdb034c8?ft=user&ft_id=624167"
-                        src="/drawings/alien_aquatic.png"
+                        src={alien_aquatic}
                         img_style="height:44vw; width:auto;"
                     />
                 </div>
@@ -351,13 +372,13 @@ import "../styles/exhibit.css";
                     <DrawingLayout
                         title="- Something -"
                         href="https://www.pixilart.com/art/something-bcec62ba62943b1?ft=user&ft_id=624167"
-                        src="/drawings/something.gif"
+                        src={something}
                         img_style="height:54vw; width:auto;"
                     />
                     <DrawingLayout
                         title="- A Picture In Motion -"
                         href="https://www.pixilart.com/art/uh-f807ffeeac68?ft=user&ft_id=624167"
-                        src="/drawings/apim.gif"
+                        src={apim}
                         img_style="height:44vw; width:auto;"
                     />
                 </div>
@@ -366,11 +387,15 @@ import "../styles/exhibit.css";
     </div>
 </BaseLayout>
 <script>
-    function change_hud(
-        element_clicked: string,
-        portofolio: Element,
-        button: Element,
-    ) {
+    const portofolio = document.getElementById("portofolio");
+    const buttons = document.querySelectorAll("button.child");
+
+    var programming = portofolio?.querySelector(".programming");
+    var music = portofolio?.querySelector(".music");
+    var pixel_art = portofolio?.querySelector(".pixel_art");
+    var misc = portofolio?.querySelector(".misc");
+    function change_hud(element_clicked: string, button: Element) {
+        if (!portofolio) return;
         button.classList.add("active");
         button.classList.add("unselectable");
         for (const child of portofolio.children) {
@@ -380,27 +405,21 @@ import "../styles/exhibit.css";
         }
         switch (element_clicked) {
             case "Programming":
-                portofolio
-                    .querySelector(".programming")
-                    ?.classList.remove("hide");
+                programming?.classList.remove("hide");
                 break;
             case "Music":
-                portofolio.querySelector(".music")?.classList.remove("hide");
+                music?.classList.remove("hide");
                 break;
             case "Pixel art":
-                portofolio
-                    .querySelector(".pixel_art")
-                    ?.classList.remove("hide");
+                pixel_art?.classList.remove("hide");
                 break;
             case "Misc":
-                portofolio.querySelector(".misc")?.classList.remove("hide");
+                misc?.classList.remove("hide");
                 break;
         }
     }
-    const portofolio_div = document.getElementById("portofolio");
-    const buttons = document.querySelectorAll("button.child");
     buttons.forEach((button) => {
-        if (!portofolio_div) {
+        if (!portofolio) {
             return;
         }
         button.addEventListener("click", () => {
@@ -413,14 +432,14 @@ import "../styles/exhibit.css";
                 button.classList.remove("active");
                 button.classList.remove("unselectable");
             });
-            change_hud(text, portofolio_div, button);
+            change_hud(text, button);
         });
         const text = button.querySelector("h5")?.textContent;
         if (!text) {
             return;
         }
         if (text === "Programming") {
-            change_hud(text, portofolio_div, button);
+            change_hud(text, button);
             button.classList.add("active");
             button.classList.add("unselectable");
         }

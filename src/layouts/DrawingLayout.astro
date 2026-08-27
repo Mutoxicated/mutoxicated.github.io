@@ -1,12 +1,36 @@
 ---
+import { Image } from "astro:assets";
+
 const { title, href, src, style, img_style } = Astro.props;
+const loading = Astro.props.loading ?? "lazy";
+const fetchpriority = Astro.props.fetchpriority ?? "auto";
+const isGif = typeof src === "object" && src && src.format === "gif";
 ---
 
 <div class="drawing_container" style={style}>
     <h4>{title}</h4>
-    <a href={href} rel="noreferrer" target="_blank"
-        ><img src={src} style={img_style} /></a
-    >
+    <a href={href} rel="noreferrer" target="_blank">
+        {
+            isGif ? (
+                <img
+                    src={src.src}
+                    style={img_style}
+                    loading={loading}
+                    fetchpriority={fetchpriority}
+                    decoding="async"
+                />
+            ) : (
+                <Image
+                    alt=""
+                    src={src}
+                    style={img_style}
+                    loading={loading}
+                    fetchpriority={fetchpriority}
+                    decoding="async"
+                />
+            )
+        }
+    </a>
 </div>
 
 <style>
