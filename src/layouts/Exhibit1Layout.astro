@@ -24,13 +24,13 @@ const fetchpriority = props.fetchpriority ?? "auto";
                     fetchpriority={fetchpriority}
                     decoding="async"
                     alt={title}
-                ></Image
-            ></a>
+                /></a
+            >
         </div>
         <div class="figcontainer">
-            <figcaption style={t_style}>
+            <p style={t_style}>
                 <slot />
-            </figcaption>
+            </p>
         </div>
     </div>
 </div>
@@ -38,7 +38,6 @@ const fetchpriority = props.fetchpriority ?? "auto";
 <script>
     var figcons = document.querySelectorAll(".figcontainer");
     figcons.forEach((figcon) => {
-        console.log(figcon);
         if (figcon) {
             var figcap = figcon.children.item(0);
             if (figcap && figcap.textContent == "") {
@@ -57,7 +56,7 @@ const fetchpriority = props.fetchpriority ?? "auto";
         border-style: solid;
         height: fit-content;
         grid-auto-flow: dense;
-        animation: dropdown 0.07s linear;
+        /*animation: dropdown 0.07s linear;*/
     }
 
     @keyframes dropdown {
@@ -98,14 +97,14 @@ const fetchpriority = props.fetchpriority ?? "auto";
         height: auto;
         border-radius: 14px;
         border: 2px solid light-dark(black, white);
-        animation: tilt 0.3s linear;
-        animation-delay: 0.3s;
+        /*animation: tilt 0.3s linear;
+        animation-delay: 0.3s;*/
     }
     img:hover {
         border-color: rgb(0, 200, 255);
         box-shadow: light-dark(rgb(200, 250, 255), rgb(0, 30, 180)) 0 0 10px;
     }
-    figcaption,
+    p,
     h4 {
         text-align: center;
         margin: 0.2em;

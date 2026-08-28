@@ -38,11 +38,11 @@ const isGif = typeof src === "object" && src && src.format === "gif";
         display: grid;
         justify-content: center;
         align-content: center;
-        animation: appear 0.5s ease-out;
+        /*animation: appear 0.5s ease-out;*/
     }
     @keyframes appear {
         0% {
-            transform: translateY(100vh);
+            transform: translateY(100dvh);
         }
     }
     @keyframes woo {
@@ -52,8 +52,8 @@ const isGif = typeof src === "object" && src && src.format === "gif";
     }
 
     img {
-        animation: woo 0.2s ease-in-out;
-        animation-delay: 0.7s;
+        /*animation: woo 0.2s ease-in-out;
+        animation-delay: 0.7s;*/
     }
 
     h4 {
